@@ -6,6 +6,21 @@ A prompt-based system for maintaining a living knowledge wiki inside an [Obsidia
 
 Instead of asking an LLM the same questions repeatedly, you maintain a persistent `wiki/` folder inside your vault. The LLM reads raw sources (meeting transcripts, journal entries, clippings), synthesizes them into structured markdown pages, and keeps the wiki current over time. Knowledge compounds — each new source enriches dozens of pages, and valuable query answers get filed back in rather than disappearing into chat history.
 
+## Getting started
+
+See **[DEPLOY.md](DEPLOY.md)** for the full setup guide, including:
+- Prerequisites (Claude with Obsidian MCP)
+- How to customize the prompt for your vault
+- Step-by-step first-time initialization
+- Troubleshooting common failures
+- Ongoing maintenance cadence
+
+**Quick version:**
+1. Confirm the Obsidian MCP integration is active in your Claude session.
+2. Edit the PHASE 1 folder list in `INIT_PROMPT.md` to match your vault layout.
+3. Paste `INIT_PROMPT.md` into a fresh Claude conversation.
+4. Wait for the Phase 4 report — then start a new session and use the resume prompt below.
+
 ## How it works
 
 The system has three components:
@@ -13,6 +28,8 @@ The system has three components:
 | File | Purpose |
 |------|---------|
 | `INIT_PROMPT.md` | The initialization prompt. Run once to bootstrap the `wiki/` folder in a fresh vault. |
+| `DEPLOY.md` | Step-by-step setup guide, customization instructions, and troubleshooting. |
+| `SCHEMA_TEMPLATE.md` | Reference template for `wiki/SCHEMA.md` (the LLM writes the actual file during init). |
 | `wiki/SCHEMA.md` | Written by the LLM during init. Governs all future sessions — folder map, conventions, and the three skills. |
 | `wiki/index.md` | Content catalog. One row per wiki page. The LLM reads this first on every query. |
 | `wiki/log.md` | Append-only operation log with grep-parseable headings. |
@@ -29,14 +46,16 @@ Once initialized, you drive the wiki with three commands:
 
 ## Resuming a session
 
-At the start of any new session, give the LLM this short prompt:
+After initialization, start every new session with this prompt:
 
 ```
 Read wiki/SCHEMA.md, wiki/index.md, and the last 10 entries in wiki/log.md
 to orient yourself. Then tell me what was done recently and what you recommend next.
 ```
 
-The three files together contain everything the LLM needs — no memory of prior sessions required.
+The three files together contain everything the LLM needs — no memory of prior
+sessions required. The LLM will read them, summarize recent activity from the log,
+and suggest what to do next.
 
 ## Vault structure assumed
 

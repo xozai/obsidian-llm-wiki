@@ -1,10 +1,50 @@
 # Obsidian LLM Wiki — Initialization Prompt
 
-> **How to use:** Paste the contents of this file at the start of a new Claude Code
-> session with your Obsidian vault open and the Obsidian MCP tools available.
-> The LLM will explore your vault, synthesize what it finds, and create the `wiki/`
-> folder with all infrastructure files. After that, use the short resume prompt in
-> `README.md` to re-orient any future session.
+<!-- ═══════════════════════════════════════════════════════════════════════════
+  BEFORE YOU PASTE THIS PROMPT — READ THIS SECTION
+  ════════════════════════════════════════════════════════════════════════════
+
+  WHAT THIS DOES
+  This prompt bootstraps a persistent wiki/ folder inside your Obsidian vault.
+  Run it once. After that, use the three-line resume prompt (in README.md) at
+  the start of every future session. See DEPLOY.md for the full setup guide.
+
+  REQUIREMENTS — confirm all three before pasting:
+
+  ✅ 1. You are in a FRESH conversation (not an existing one with prior context).
+
+  ✅ 2. The Obsidian MCP integration is ACTIVE in this session.
+        Verify by asking first: "List the files in my Obsidian vault root."
+        You should see your vault folders. If not, connect the integration
+        before proceeding — the prompt will fail silently without it.
+
+  ✅ 3. The PHASE 1 folder list below MATCHES YOUR VAULT.
+        The list under "PHASE 1 — EXPLORE" describes a specific vault layout.
+        Update it to match your actual folders before pasting. If you skip
+        this step, prepend: "Before Phase 1, call obsidian_list_files_in_vault
+        to discover the folder structure, then proceed with exploration."
+
+  CUSTOMIZATION
+  Everything below the PHASE 1 folder list is vault-agnostic and should not
+  need editing. The only section to customize per-vault is the folder
+  descriptions in PHASE 1.
+
+  WHAT SUCCESS LOOKS LIKE
+  After the LLM finishes, your vault will contain a new wiki/ folder:
+    wiki/SCHEMA.md     — governing document (skills, conventions, folder map)
+    wiki/index.md      — content catalog (one row per wiki page)
+    wiki/log.md        — operation log (first entry: BOOTSTRAP)
+    wiki/work/         — synthesized work knowledge
+    wiki/people/       — synthesized person profiles
+    wiki/meetings/     — meeting themes and decisions
+    wiki/personal/     — personal areas
+  The LLM will end with a report listing everything created and recommending
+  your first INGEST, QUERY, and LINT actions.
+
+  TROUBLESHOOTING
+  If initialization is interrupted (context limit on large vaults), see the
+  recovery prompt in DEPLOY.md. To start over, delete wiki/ and run again.
+  ═══════════════════════════════════════════════════════════════════════════ -->
 
 ---
 
