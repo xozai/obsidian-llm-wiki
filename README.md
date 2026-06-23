@@ -62,14 +62,15 @@ and suggest what to do next.
 This prompt was built for a vault with the following layout, but is easily adapted:
 
 ```
-Areas/          Granola/        People/         Templates/
-Claude Analysis/ Inbox/          Projects/       assets/
-Clippings/      Limitless Lifelogs/ Resources/  daily briefing/
-End of Day Reviews/ Meetings/   Supernote/      end of day briefing/
-Excalidraw/     News Briefings/ journals/
+Raw sources:   Granola/ (meetings), journals/, Clippings/, Limitless Lifelogs/,
+               End of Day Reviews/, Meetings/, News Briefings/, Supernote/, Inbox/
+Hub notes:     Areas/, Projects/, People/
+Reference:     Resources/, Commonplace/, Claude Analysis/, NotebookLM/, Fabric/
+Scaffolding:   Templates/, assets/, Canvas/, Excalidraw/, agents/, Automations/,
+               daily briefing/, end of day briefing/
 ```
 
-Key integrations in use: Granola (meeting transcripts), Todoist, Limitless (lifelogs), Supernote, Dataview.
+Key integrations in use: Granola (meeting transcripts), Todoist, Limitless (lifelogs), Supernote, NotebookLM, Fabric, Dataview.
 
 ## Log parseability
 

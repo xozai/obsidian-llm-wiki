@@ -67,21 +67,27 @@ The vault root contains these top-level folders. Explore each one:
 
   Areas/          — Ongoing responsibilities (work, personal). Each file is a hub note
                     for a recurring meeting or responsibility area at Splunk/Cisco.
+  Automations/    — Python scripts and their data (finance, purchases). Skip for wiki content.
+  Canvas/         — Obsidian Canvas boards (skip content, just note existence).
   Claude Analysis/ — Prior analysis Claude has produced.
   Clippings/      — Web clippings saved for reference.
+  Commonplace/    — Commonplace book: notes on articles, books, films, and podcasts.
   End of Day Reviews/ — Daily end-of-day reflections.
   Excalidraw/     — Diagrams (skip content, just note existence).
+  Fabric/         — Fabric AI pattern outputs.
   Granola/        — Meeting transcripts organized by date (YYYY-MM-DD/). This is the
                     richest source of raw meeting data. Folders go back to 2026-01.
   Inbox/          — Unsorted capture notes.
   Limitless Lifelogs/ — Lifelog data from a wearable AI device.
   Meetings/       — Structured meeting notes.
   News Briefings/ — Daily news summaries.
+  NotebookLM/     — NotebookLM exports and study guides.
   People/         — Person notes split into Work/ and Personal/.
   Projects/       — Project hub notes (Work/, School/, Personal/).
   Resources/      — Reference materials and PDF highlights.
   Supernote/      — Handwritten notes captured from a Supernote device.
   Templates/      — Note templates (Daily Note, Hub Note, Meeting Template, etc.).
+  agents/         — Agent configs/outputs (e.g. Gemini). Skip for wiki content.
   assets/         — Static assets (skip).
   daily briefing/ — Morning briefings.
   end of day briefing/ — Evening briefings.
